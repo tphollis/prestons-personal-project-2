@@ -1,0 +1,26 @@
+{
+    "user1": {
+        "firstName" : "Preston",
+        "lastName" : "Hollis",
+        "email": "thomas.ticki.hollis@gmail.com",
+        "password": "I-am-admin",
+        "birthday": "10/30/1995",
+        "privelage": "1"
+    },
+    "contact2": {
+        "firstName" : "Samantha",
+        "lastName" : "Jones",
+        "email": "samanthaJ347@gmail.com",
+        "password": "Super-secret-password",
+        "birthday": "7/3/2001",
+        "privelage": "3"
+    },
+    "contact3": {
+        "firstName" : "Gar",
+        "lastName" : "Chomp",
+        "email": "pokemon@gmail.com",
+        "password": "rock$",
+        "birthday": "9/28/2006",
+        "privelage": "3"
+    }
+}

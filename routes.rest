@@ -1,0 +1,73 @@
+// LOCALHOST
+### Get all contacts
+GET http://localhost:8080/users
+
+### Get contact by id
+GET http://localhost:8080/users/62895538d24221b30e49c540
+
+### Create contact
+POST http://localhost:8080/users HTTP/1.1
+content-type: application/json
+
+{
+    "firstName":"John",
+    "lastName":"Jacob",
+    "email":"jingleheimer.schmidt@gmail.com",
+    "password": "My-name",
+    "birthday":"07/29/1926",
+    "privelage": "3"
+}
+
+### PUT contact
+PUT http://localhost:8080/users/62895538d24221b30e49c541 HTTP/1.1
+content-type: application/json
+
+{
+    "firstName" : "Samantha",
+    "lastName" : "Jones",
+    "email": "samanthaJ347@gmail.com",
+    "password": "Super-secret-password",
+    "birthday": "7/3/2001",
+    "privelage": "3"
+}
+
+### DELETE contact
+DELETE http://localhost:8080/users/some-number HTTP/1.1
+
+
+
+// PRODUCTION Deploy
+### Get all contacts
+GET https://prestons-personal-project-2.herokuapp.com/users
+
+### Get contact by id
+GET https://prestons-personal-project-2.herokuapp.com/users/62895538d24221b30e49c540
+
+### create contacts
+POST https://prestons-personal-project-2.herokuapp.com/users HTTP/1.1
+Content-Type: application/json
+
+{
+    "firstName":"John",
+    "lastName":"Jacob",
+    "email":"jingleheimer.schmidt@gmail.com",
+    "password": "My-name",
+    "birthday":"07/29/1926",
+    "privelage": "3"
+}
+
+### PUT contacts
+PUT https://prestons-personal-project-2.herokuapp.com/users/62895538d24221b30e49c541 HTTP/1.1
+Content-Type: application/json
+
+{
+    "firstName" : "Samantha",
+    "lastName" : "Jones",
+    "email": "samanthaJ347@gmail.com",
+    "password": "Super-secret-password",
+    "birthday": "7/3/2001",
+    "privelage": "3"
+}
+
+### delete contact
+DELETE  https://prestons-personal-project-2.herokuapp.com/users/some number HTTP/1.1
