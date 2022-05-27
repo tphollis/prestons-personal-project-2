@@ -1,6 +1,8 @@
 const mongodb = require('../db/connect');
 const ObjectId = require('mongodb').ObjectId;
 
+const { validationResult } = require('express-validator');
+
 const getAll = async (req, res, next) => {
   const result = await mongodb.getDb().db().collection('users').find();
   result.toArray().then((lists) => {
@@ -36,8 +38,13 @@ const createUser = async (req, res) => {
 };
 
 const updateUser = async (req, res) => {
+  const errors = validationResult(req);
+  if (!errors.isEmpty()) {
+    return res.status(400).json({ errors: errors.array() });
+  }
+
   const userId = new ObjectId(req.params.id);
-  // be aware of updateOne if you only want to update specific fields
+
   const user = {
     firstName: req.body.firstName,
     lastName: req.body.lastName,
@@ -56,6 +63,11 @@ const updateUser = async (req, res) => {
 };
 
 const deleteUser = async (req, res) => {
+  const errors = validationResult(req);
+  if (!errors.isEmpty()) {
+    return res.status(400).json({ errors: errors.array() });
+  }
+  
   const userId = new ObjectId(req.params.id);
   const response = await mongodb.getDb().db().collection('users').remove({ _id: userId }, true);
   console.log(response);
