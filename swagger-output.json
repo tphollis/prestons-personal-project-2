@@ -5,10 +5,11 @@
     "description": "Utilizes contacts in the database",
     "version": "1.0.0"
   },
-  "host": "prestons-project.herokuapp.com",
+  "host": "prestons-personal-project-2.herokuapp.com",
   "basePath": "/",
   "schemes": [
-    "https"
+    "https",
+    "http"
   ],
   "paths": {
     "/users/": {
